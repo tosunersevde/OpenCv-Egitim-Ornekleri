@@ -9,12 +9,12 @@ import numpy as np
 import matplotlib as plt
 
 image = cv2.imread("C:/Users/tosun/spyder_projeler/images/kalem.jpg",0)
-img = cv2.resize(image,(300,300))
+# img = cv2.resize(image,(300,300))
 
 #Resme treshhold yaptım.
 esik_deger = 65
 max_deger = 255
-ret,threshold_img = cv2.threshold(img,esik_deger,max_deger,cv2.THRESH_BINARY)
+ret,threshold_img = cv2.threshold(image,esik_deger,max_deger,cv2.THRESH_BINARY)
 
 #Matris Degerlerini Buldum.
 x2,y2 = threshold_img.shape[:2]
@@ -22,20 +22,20 @@ for x1 in range(x2-1):
     for y1 in range(y2-1):
         if threshold_img[x1,y1] == 0:
             if threshold_img[(x1+1),y1] == 255:
-                cv2.circle(img,(y1,x1),1,(0,255,0),-1)
+                cv2.circle(image,(y1,x1),1,(255),-1)
                 print(x1,y1,threshold_img[x1,y1])
             if threshold_img[x1,(y1+1)] == 255:
-                cv2.circle(img,(y1,x1),1,(0,255,0),-1)
+                cv2.circle(image,(y1,x1),1,(255),-1)
                 print(x1,y1,threshold_img[x1,y1])
         if threshold_img[x1,y1] == 255:
             if threshold_img[(x1+1),y1] == 0:
-                cv2.circle(img,(y1,x1),1,(0,255,0),-1)
+                cv2.circle(image,(y1,x1),1,(0,255,0),-1)
                 print(x1,y1,threshold_img[x1,y1])
             if threshold_img[x1,(y1+1)] == 0:
-                cv2.circle(img,(y1,x1),1,(0,255,0),-1)
+                cv2.circle(image,(y1,x1),1,(0,255,0),-1)
                 print(x1,y1,threshold_img[x1,y1])
 
-cv2.imshow("Original",img)
+cv2.imshow("Original",image)
 cv2.imshow("Threshold",threshold_img)
 
 cv2.waitKey(0)
