@@ -1,4 +1,3 @@
 # OpenCv-Egitim-Ornekleri
-OpenCv Ile Goruntu Isleme 
-OpenCv derslerinden pixellerle ilgili ders videosu izlendi. Gorüntüdeki nesnelerin kenarlarını belirginleştirme işlemi yapıldı.
-Bir görüntüdeki pixel değerleri bulma işlemleri, kontur yapma ödevi verildi. Treshold işlemi öğrenildi. PyQt’de eksik kalan dersler bitirildi.
+Goruntu okuma, goruntu yazdirma, goruntu olusturma, pixel-deger işlemleri, goruntuye yazi ve sekil ekleme, kenar bulma, kontür belirleme, threshold islemleri, erode-dilate islemleri, yüz tanima, PyQt ile goruntu uygulamalari, filtreleme, 2D Convulation, YOLO algoritmasi ile nesne tespiti, nesne renklendirme, arkaplana nesne yerlestirme, farkli boyutlarda nesne tespiti, label ve categorical islemleri gerceklestirildi.
+Udemy'den "[OpenCv ile Goruntu Isleme](https://www.udemy.com/course/opencv-ile-goruntu-isleme-dersi-python/)" kursu izlenerek es zamanli olarak kodlar yazildi.
